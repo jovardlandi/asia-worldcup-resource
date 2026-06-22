@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>世界杯 · 赛事信息与观赛指南</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: #f3f5f9;
+            color: #222;
+            line-height: 1.7;
+        }
+        .hero {
+            background: linear-gradient(145deg, #0b1c2e 0%, #142d44 100%);
+            padding: 5rem 1.5rem 4rem;
+            text-align: center;
+            color: #eef3fa;
+            border-bottom: 4px solid #f2b632;
+        }
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            margin-bottom: 0.75rem;
+        }
+        .hero h1 span {
+            color: #f2b632;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 640px;
+            margin: 0 auto 1.2rem;
+            opacity: 0.9;
+        }
+        .hero .tagline {
+            display: inline-block;
+            background: rgba(242, 182, 50, 0.18);
+            padding: 0.4rem 1.2rem;
+            border-radius: 40px;
+            font-size: 0.95rem;
+            border: 1px solid rgba(242, 182, 50, 0.35);
+            backdrop-filter: blur(2px);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 1.2rem 4rem;
+        }
+        .intro-card {
+            background: white;
+            padding: 2.5rem 2.2rem;
+            border-radius: 28px;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.05);
+            margin-bottom: 2.8rem;
+            border: 1px solid #e6ecf5;
+        }
+        .intro-card h2 {
+            font-size: 1.7rem;
+            font-weight: 550;
+            margin-bottom: 1rem;
+            color: #0b1c2e;
+            padding-bottom: 0.35rem;
+            border-bottom: 3px solid #f2b632;
+            display: inline-block;
+        }
+        .intro-card p {
+            font-size: 1.05rem;
+            margin: 1rem 0;
+        }
+        .intro-card a {
+            color: #1a5f8a;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 2px solid transparent;
+            transition: 0.2s;
+        }
+        .intro-card a:hover {
+            border-bottom-color: #f2b632;
+            color: #0c3a59;
+        }
+        .card-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin: 2.2rem 0 2.8rem;
+        }
+        .card-item {
+            background: white;
+            flex: 1 1 260px;
+            padding: 2rem 1.8rem;
+            border-radius: 24px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+            border: 1px solid #dfe6f0;
+            transition: all 0.25s ease;
+        }
+        .card-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 32px rgba(0,0,0,0.06);
+            border-color: #f2b63270;
+        }
+        .card-item .emoji-badge {
+            font-size: 2.2rem;
+            display: block;
+            margin-bottom: 0.4rem;
+        }
+        .card-item h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin: 0.3rem 0 0.6rem;
+            color: #0b1c2e;
+        }
+        .card-item p {
+            font-size: 0.98rem;
+            color: #3e4b5b;
+        }
+        .faq-brief {
+            background: white;
+            padding: 2rem 2.2rem;
+            border-radius: 28px;
+            box-shadow: 0 8px 22px rgba(0,0,0,0.04);
+            margin-top: 2rem;
+            border: 1px solid #e6ecf5;
+        }
+        .faq-brief h3 {
+            font-size: 1.4rem;
+            font-weight: 550;
+            margin-bottom: 0.8rem;
+            color: #0b1c2e;
+            display: flex;
+            align-items: center;
+            gap: 0.45rem;
+        }
+        .faq-brief h3 small {
+            font-size: 0.9rem;
+            font-weight: 400;
+            color: #6a7c91;
+        }
+        .faq-item {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #edf2f9;
+        }
+        .faq-item:last-child {
+            border-bottom: 0;
+        }
+        .faq-item strong {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.15rem;
+            color: #1f3a53;
+        }
+        .faq-item p {
+            margin: 0.1rem 0 0.2rem;
+            color: #415268;
+            font-size: 0.98rem;
+        }
+        .footnote {
+            margin-top: 2.5rem;
+            padding: 1rem 0;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #5e6f82;
+            border-top: 1px solid #dbe2ee;
+        }
+        .footnote a {
+            color: #1a5f8a;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .footnote a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 680px) {
+            .hero h1 { font-size: 2.1rem; }
+            .intro-card { padding: 1.8rem 1.4rem; }
+            .card-item { padding: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hero">
+        <h1>⚽ 走进<span>世界杯</span></h1>
+        <p>用一场赛事，连接整个世界。快速了解亚洲世界杯预选赛、赛程、分组与观赛渠道。</p>
+        <div class="tagline">🏆 亚洲赛区 · 最新动态</div>
+    </div>
+
+    <div class="container">
+
+        <!-- 信息卡片：用途 -->
+        <div class="intro-card">
+            <h2>📌 这个网站是做什么的？</h2>
+            <p>如果你正在寻找亚洲区 <a href="https://asia--worldcup.com">世界杯</a> 预选赛的赛程、积分榜、出线形势和官方资讯，那么这里正是你需要的集中页面。网站聚合了来自各大足联的公开信息，以清晰的时间线和分组卡片呈现，方便你在手机或电脑上快速浏览。</p>
+            <p>无论是想确认下一轮比赛日，还是回顾上一阶段的晋级球队，信息结构都比较直观，省去在多个平台之间切换的麻烦。</p>
+        </div>
+
+        <!-- 用途卡片 (特点卡片) -->
+        <div class="card-grid">
+            <div class="card-item">
+                <span class="emoji-badge">📅</span>
+                <h3>赛程一目了然</h3>
+                <p>按轮次排列的完整赛历，包含开球时间、比赛场地及转播提示，方便提前安排观赛计划。</p>
+            </div>
+            <div class="card-item">
+                <span class="emoji-badge">📊</span>
+                <h3>小组积分动态</h3>
+                <p>每轮结束后实时更新的积分榜，净胜球、进球数、出线概率一目了然，支持横向对比。</p>
+            </div>
+            <div class="card-item">
+                <span class="emoji-badge">🔍</span>
+                <h3>球队与数据</h3>
+                <p>各参赛国家队的阵容、历史交手记录及近期战绩，辅助你判断比赛走势，聊球更有依据。</p>
+            </div>
+        </div>
+
+        <!-- 适合人群段落 + 自然链接 -->
+        <div class="intro-card" style="background: #f9fbfe;">
+            <h2>🧭 哪些人适合关注这个站点？</h2>
+            <p>如果你是足球爱好者，想追踪亚洲球队冲击 <a href="https://asia--worldcup.com">世界杯</a> 正赛的每一步；或者你是数据分析型球迷，喜欢研究积分形势与出线概率，这里的结构化卡片能帮你节省大量搜索时间。</p>
+            <p>媒体从业者、竞猜爱好者、海外华人球迷同样会从中受益——所有信息都围绕“亚洲赛区”这一核心，没有冗余广告，页面干净清晰。</p>
+            <p style="margin-top: 0.8rem;">简而言之，这是为每一位关心亚洲足球与世界大赛连接点的人准备的轻量信息入口。</p>
+        </div>
+
+        <!-- 常见问题摘要（FAQ 风格） -->
+        <div class="faq-brief">
+            <h3>❓ 常见问题摘要 <small>（快速了解站内内容）</small></h3>
+            <div class="faq-item">
+                <strong>⚡ 网站更新频率如何？</strong>
+                <p>通常在每轮预选赛结束后数小时内更新积分榜与下一轮赛程，比赛日当天会补充开球时间等细节。</p>
+            </div>
+            <div class="faq-item">
+                <strong>⚡ 是否包含所有亚洲球队？</strong>
+                <p>覆盖亚足联旗下所有参赛国，包括第一轮至第三阶段预选赛，并提供附加赛对阵信息。</p>
+            </div>
+            <div class="faq-item">
+                <strong>⚡ 移动端浏览体验怎么样？</strong>
+                <p>页面采用响应式设计，卡片自动适配手机屏幕，横向表格也会转化为纵向列表，阅读流畅。</p>
+            </div>
+            <div class="faq-item">
+                <strong>⚡ 需要注册或登录吗？</strong>
+                <p>完全不需要。所有赛程与积分数据均为公开内容，直接浏览即可，无需留下任何个人信息。</p>
+            </div>
+        </div>
+
+        <!-- 自然链接段落（再次出现，但嵌入在句子中）-->
+        <div class="footnote">
+            <p>了解亚洲区预选赛最新动态，可随时前往 <a href="https://asia--worldcup.com">世界杯</a> 专题页面，赛程、积分与出线形势都在那里持续更新。</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
